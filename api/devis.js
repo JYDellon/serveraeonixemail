@@ -212,6 +212,7 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     const {
+      prenom,
       nom,
       email,
       telephone,
@@ -230,7 +231,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_DESTINATAIRE,
-      subject: `Nouvelle demande de devis de ${nom}`,
+      subject: `Nouvelle demande de devis de ${prenom}  ${nom}`,
       text: `
         Vous avez reçu une nouvelle demande de devis :
         
@@ -256,7 +257,7 @@ export default async function handler(req, res) {
       to: email, // Email de l'expéditeur
       subject: 'Confirmation de réception de votre demande de devis',
       text: `
-        Bonjour ${nom},
+        Bonjour ${prenom}  ${nom},
 
         Nous avons bien reçu votre demande de devis. Voici un récapitulatif des informations envoyées :
 

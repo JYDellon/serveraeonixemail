@@ -84,7 +84,7 @@ const transporter = nodemailer.createTransport({
 
 // Configurer les options CORS
 const cors = Cors({
-  origin: 'https://votrefrontend.vercel.app', // Spécifiez le domaine autorisé
+  origin: '*', // Spécifiez le domaine autorisé
   methods: ['GET', 'POST'],
 });
 

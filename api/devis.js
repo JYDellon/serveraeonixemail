@@ -59,13 +59,6 @@
 
 
 
-
-
-
-
-
-
-
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import Cors from 'cors';

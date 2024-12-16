@@ -93,3 +93,17 @@ export default async (req, res) => {
     res.status(405).json({ message: 'Méthode HTTP non autorisée' });
   }
 };
+
+
+
+
+
+
+
+
+const mailOptions = {
+  from: process.env.EMAIL_USER,
+  to: process.env.EMAIL_DESTINATAIRE,
+  subject: 'Test Email',
+  text: 'Ceci est un email de test.',
+};
